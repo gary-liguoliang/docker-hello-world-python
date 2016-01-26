@@ -2,10 +2,11 @@ FROM ubuntu
 ENV DEBIAN_FRONTEND noninteractive
 CMD ["bash"]
 
-ADD /app /app
 RUN apt-get update
 RUN apt-get install -y python
+
 WORKDIR /app
+ADD /app /app
 
 
 EXPOSE 8000
